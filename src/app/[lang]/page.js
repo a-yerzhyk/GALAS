@@ -238,10 +238,14 @@ export default async function Home({ params: { lang } }) {
       <footer className="bg-white text-black">
         <div className="container px-8 pt-4 pb-11 lg:px-14 lg:py-[70px] flex flex-col gap-5">
           <div className="flex flex-col lg:flex-row justify-between gap-y-[10px] gap-x-[30px]">
-            <div className="flex justify-between items-center lg:block">
-              <Image className="flex-none w-fit h-[60px] lg:h-[127px]" src={logoBlack} alt="galas_logo_black" />
-              <Link className="lg:hidden text-lg font-bold uppercase" href="#about">{dictionary.footer.aboutUs}</Link>
-              <Link className="lg:hidden text-lg font-bold uppercase" href="#reports">{dictionary.footer.reports}</Link>
+            <div className="space-y-2 sm:flex justify-between items-center flex-wrap flex-col sm:flex-row lg:block">
+              <div className="sm:flex-1 sm:basis-[41%]">
+                <Image className="w-fit h-[60px] lg:h-[127px]" src={logoBlack} alt="galas_logo_black" />
+              </div>
+              <div className="w-full sm:flex-1 sm:basis-[59%] flex justify-between lg:hidden text-lg font-bold uppercase break-keep">
+                <Link className="" href="#about">{dictionary.footer.aboutUs}</Link>
+                <Link className="" href="#reports">{dictionary.footer.reports}</Link>
+              </div>
             </div>
             <div className="flex-1 flex justify-between gap-[80px]">
               <div className="flex-1 basis-[730px] flex flex-col gap-[10px] justify-between">
