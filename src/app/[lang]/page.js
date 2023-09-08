@@ -21,7 +21,7 @@ export default async function Home({ params: { lang } }) {
   return (
     <>
       <header className="fixed bg-black-secondary z-10 w-full">
-        <div className="container px-6 lg:px-24 py-4 flex justify-between gap-8 items-center">
+        <div className="container px-6 lg:px-24 py-4 flex justify-between items-center sm:gap-8">
           <Image src={logoLight} alt="logo-light" height="60" />
           <nav className="flex-1 hidden xl:block">
             <ul className="flex justify-between items-center min-[1560px]:gap-[100px] min-[1560px]:justify-center">
@@ -39,12 +39,10 @@ export default async function Home({ params: { lang } }) {
               </li>
             </ul>
           </nav>
-          <div className="xl:flex-row-reverse flex items-center gap-[83px]">
-            <div>
-              <LanguageSwitch lang={lang}/>
-            </div>
-            <a className="button button_small button_yellow" href="#">{dictionary.support}</a>
+          <div>
+            <LanguageSwitch lang={lang}/>
           </div>
+          <a className="button button_small button_yellow" href="#">{dictionary.support}</a>
         </div>
       </header>
       <main className="container">
@@ -61,7 +59,7 @@ export default async function Home({ params: { lang } }) {
           <a className="button button_large button_blue" href="#">{dictionary.support}</a>
         </section>
 
-        <a class="relative -top-[48px] lg:-top-[100px]" id="army"></a>
+        <a className="relative -top-[48px] lg:-top-[100px]" id="army"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 mb-5 lg:mx-14 lg:mb-28">
           <div className="flex flex-col lg:flex-row justify-between gap-x-[100px] gap-y-8">
             <div className="flex-1">
@@ -114,7 +112,7 @@ export default async function Home({ params: { lang } }) {
           </h3>
         </section>
         
-        <a class="relative -top-[48px] lg:-top-[100px]" id="animals"></a>
+        <a className="relative -top-[48px] lg:-top-[100px]" id="animals"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 mb-14 lg:mx-14 lg:mb-20">
           <div className="flex flex-col lg:flex-row justify-between gap-x-[100px] gap-y-8">
             <div className="flex-1">
@@ -157,7 +155,7 @@ export default async function Home({ params: { lang } }) {
           </h3>
         </section>
 
-        <a class="relative -top-[48px] lg:-top-[100px]" id="about"></a>
+        <a className="relative -top-[48px] lg:-top-[100px]" id="about"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 pt-5 pb-7 lg:pl-[80px] lg:pr-[90px] 2xl:pl-[194px] 2xl:pr-[118px] lg:pt-[84px] lg:pb-[70px] mx-6 lg:mx-14 mb-6 lg:mb-20">
           <div className="flex flex-col lg:flex-row lg:mb-16 gap-y-5 lg:gap-y-0 justify-between custom-scrollbar ">
             <div className="flex-1 flex flex-col items-center gap-y-[60px]">
@@ -205,7 +203,7 @@ export default async function Home({ params: { lang } }) {
           </h3>
         </section>
 
-        <a class="relative -top-[48px] lg:-top-[100px]" id="reports"></a>
+        <a className="relative -top-[48px] lg:-top-[100px]" id="reports"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 pt-5 lg:px-[50px] lg:pt-[84px] mx-6 mb-14 lg:mx-14 lg:mb-20">
           <p className="text-3xl font-alternates text-yellow uppercase mb-6">
             {dictionary.reports.title}
@@ -218,11 +216,11 @@ export default async function Home({ params: { lang } }) {
           </div>
         </section>
         
-        <section className="relative mx-8 mb-8 lg:mb-16 2xl:mx-28 2xl:mb-20 overflow-hidden">
+        <section className="relative px-8 mb-8 lg:mb-16 2xl:px-28 2xl:mb-20 overflow-hidden">
           <h3 className="text-2xl lg:text-5xl leading-[60px] font-light font-alternates text-yellow text-center uppercase">
             {dictionary.howToHelp}
           </h3>
-          <div className="flex justify-between items-center px-16">
+          <div className="flex justify-between items-center sm:px-16">
             <div className="py-20 lg:py-0 h-full flex flex-col items-start justify-center gap-y-6">
               <a className="flex items-center gap-4 lg:gap-7" href="https://www.revolut.com/" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={revolut} alt="revolut-logo" />
@@ -233,7 +231,7 @@ export default async function Home({ params: { lang } }) {
                 <span className="text-lg lg:text-3xl">pomagam.pl/galas_ua</span>
               </a>
             </div>
-            <Image className="absolute -right-[150px] bottom-0 lg:static h-[300px] lg:h-[500px] xl:h-[700px]" src={trigent} alt="trident" />
+            <Image className="absolute -right-[150px] bottom-0 lg:static h-[300px] lg:h-[500px] xl:h-[700px] -z-10" src={trigent} alt="trident" />
           </div>
         </section>
       </main>
@@ -271,7 +269,7 @@ export default async function Home({ params: { lang } }) {
               </div>
             </div>
           </div>
-          <div className="2xl:hidden flex justify-between lg:justify-end gap-6 font-bold">
+          <div className="2xl:hidden flex flex-col sm:flex-row justify-between lg:justify-end gap-6 font-bold">
             <a href="https://www.instagram.com/galas_ua" target="_blank" className="flex gap-4 items-center">
               <Image src={instagram} alt="instagram" height="40" />
               galas_ua

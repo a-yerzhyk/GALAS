@@ -22,7 +22,7 @@ export default function LanguageSwitch({ lang: currentLang }) {
             key={supported}
             className={classNames(
               'rounded-full w-[45px] h-[45px] border-4 text-sm uppercase',
-              supported === currentLang ? 'border-white text-white' : 'border-blue text-blue'
+              supported === currentLang ? 'border-white text-white hidden sm:inline-block' : 'border-blue text-blue'
             )}
             onClick={() => handleLanguageSwitch(supported)}
           >
