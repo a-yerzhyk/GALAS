@@ -1,5 +1,5 @@
-// import photo1 from '@/assets/images/reports/report1-1.jpg'
-// import photo2 from '@/assets/images/reports/report1-2.jpg'
+import photo1 from '@/assets/images/reports/new/png/resized/compressed/report1-1.png'
+import photo2 from '@/assets/images/reports/new/jpg/resized/compressed/report1-1.jpg'
 // import photo3 from '@/assets/images/reports/report1-3.jpg'
 // import photo4 from '@/assets/images/reports/report1-4.jpg'
 // import photo5 from '@/assets/images/reports/report1-5.jpg'
@@ -25,14 +25,14 @@
 // import photo26 from '@/assets/images/reports/report5-2.jpg'
 
 export const reports = [
-  // {
-  //   src: photo1,
-  //   alt: "photo1",
-  // },
-  // {
-  //   src: photo2,
-  //   alt: "photo2",
-  // },
+  {
+    src: photo1,
+    alt: "photo1",
+  },
+  {
+    src: photo2,
+    alt: "photo2",
+  },
   // {
   //   src: photo3,
   //   alt: "photo3",
