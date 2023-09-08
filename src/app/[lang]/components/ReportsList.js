@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import ImagePreview from "./ImagePreview"
 
-import { reports } from '@/service/reports'
+import reports from '@/service/reports'
 
 export default function ReportsList() {
   const [imagePreview, setImagePreview] = useState(null)
