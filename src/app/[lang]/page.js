@@ -59,7 +59,7 @@ export default async function Home({ params: { lang } }) {
           <a className="button button_large button_blue" href="#">{dictionary.support}</a>
         </section>
 
-        <a className="relative -top-[48px] lg:-top-[100px]" id="army"></a>
+        <a className="relative -top-[100px]" id="army"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 mb-5 lg:mx-14 lg:mb-28">
           <div className="flex flex-col lg:flex-row justify-between gap-x-[100px] gap-y-8">
             <div className="flex-1">
@@ -112,7 +112,7 @@ export default async function Home({ params: { lang } }) {
           </h3>
         </section>
         
-        <a className="relative -top-[48px] lg:-top-[100px]" id="animals"></a>
+        <a className="relative -top-[100px]" id="animals"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 mb-14 lg:mx-14 lg:mb-20">
           <div className="flex flex-col lg:flex-row justify-between gap-x-[100px] gap-y-8">
             <div className="flex-1">
@@ -155,7 +155,7 @@ export default async function Home({ params: { lang } }) {
           </h3>
         </section>
 
-        <a className="relative -top-[48px] lg:-top-[100px]" id="about"></a>
+        <a className="relative -top-[100px]" id="about"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 pt-5 pb-7 lg:pl-[80px] lg:pr-[90px] 2xl:pl-[194px] 2xl:pr-[118px] lg:pt-[84px] lg:pb-[70px] mx-6 lg:mx-14 mb-6 lg:mb-20">
           <div className="flex flex-col lg:flex-row lg:mb-16 gap-y-5 lg:gap-y-0 justify-between custom-scrollbar ">
             <div className="flex-1 flex flex-col items-center gap-y-[60px]">
@@ -203,7 +203,7 @@ export default async function Home({ params: { lang } }) {
           </h3>
         </section>
 
-        <a className="relative -top-[48px] lg:-top-[100px]" id="reports"></a>
+        <a className="relative -top-[100px]" id="reports"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 pt-5 lg:px-[50px] lg:pt-[84px] mx-6 mb-14 lg:mx-14 lg:mb-20">
           <p className="text-3xl font-alternates text-yellow uppercase mb-6">
             {dictionary.reports.title}
