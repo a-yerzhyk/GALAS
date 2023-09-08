@@ -56,23 +56,23 @@ export default function ImagePreview ({
   return (
     <>
       { currentImage &&
-        <div onClick={() => onClose()} className="fixed left-0 top-0 w-screen h-screen z-10 p-[56px]">
-          <div className="relative outline outline-[100px] outline-black-secondary flex items-center justify-center border-[3px] border-yellow rounded-2xl h-full w-full">
+        <div onClick={() => onClose()} className="fixed left-0 top-0 w-screen h-screen z-10 sm:p-[56px]">
+          <div className="relative outline sm:outline-[100px] outline-black-secondary flex items-center justify-center sm:border-[3px] border-yellow sm:rounded-2xl h-full w-full">
             <div className="absolute w-full h-full backdrop-blur-md -z-10"></div>
             <Image
               className={classNames(
-                "max-lg:h-10 absolute left-5 xl:left-[100px] cursor-pointer",
+                "w-fit max-lg:h-10 absolute max-sm:left-6 max-sm:bottom-[30px] sm:left-5 xl:left-[100px] cursor-pointer",
                 canPrev ? "" : "opacity-50"
               )}
               src={arrowLeft}
               alt="Previous report"
               onClick={handlePreviousReport}
             />
-            <Image placeholder="blur" className="w-auto h-[70%]" src={currentImage} alt="Image report" priority={false} />
+            <Image placeholder="blur" height="700" src={currentImage} alt="Image report" priority={false} />
             {/* {currentImage} */}
             <Image
               className={classNames(
-                "max-lg:h-10 absolute right-5 xl:right-[100px] cursor-pointer",
+                "w-fit max-lg:h-10 absolute max-sm:right-6 max-sm:bottom-[30px] sm:right-5 xl:right-[100px] cursor-pointer",
                 canNext ? "" : "opacity-50"
               )}
               src={arrowRight}
