@@ -61,7 +61,7 @@ export default function ImagePreview ({
             <div className="absolute w-full h-full backdrop-blur-md -z-10"></div>
             <Image
               className={classNames(
-                "w-fit max-lg:h-10 absolute max-sm:left-6 max-sm:bottom-[30px] sm:left-5 xl:left-[100px] cursor-pointer",
+                "w-fit max-lg:h-10 absolute max-sm:left-6 max-sm:top-[85%] sm:left-5 xl:left-[100px] cursor-pointer",
                 canPrev ? "" : "opacity-50"
               )}
               src={arrowLeft}
@@ -72,7 +72,7 @@ export default function ImagePreview ({
             {/* {currentImage} */}
             <Image
               className={classNames(
-                "w-fit max-lg:h-10 absolute max-sm:right-6 max-sm:bottom-[30px] sm:right-5 xl:right-[100px] cursor-pointer",
+                "w-fit max-lg:h-10 absolute max-sm:right-6 max-sm:top-[85%] sm:right-5 xl:right-[100px] cursor-pointer",
                 canNext ? "" : "opacity-50"
               )}
               src={arrowRight}
