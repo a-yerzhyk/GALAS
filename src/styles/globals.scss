@@ -1,0 +1,105 @@
+@import '@/assets/fonts/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply min-h-screen bg-black-secondary text-white;
+    overflow-x: hidden !important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    @apply max-w-[1920px] mx-auto;
+  }
+
+  .navigation-item {
+    @apply p-3 border-4 border-black rounded-full text-sm text-white uppercase font-medium;
+
+    &__active {
+      @apply border-yellow rounded-2xl;
+    }
+  }
+
+  .button {
+    @apply uppercase;
+
+    &_blue {
+      @apply bg-blue text-white;
+    }
+
+    &_yellow {
+      @apply bg-yellow text-black;
+    }
+
+    &_white {
+      @apply bg-white text-black;
+    }
+
+    &_small {
+      @apply text-sm font-semibold rounded-xl p-3;
+    }
+
+    &_medium {
+      @apply text-lg font-semibold rounded-xl px-5 py-3;
+    }
+
+    &_large {
+      @apply text-2xl lg:text-4xl px-11 py-5 lg:px-20 lg:py-9 rounded-2xl;
+    }
+  }
+
+  .main-section {
+    height: calc(100vh)
+  }
+}
+
+@layer utilities {
+  .important-mark {
+    @apply absolute top-40 -right-[18px] text-3xl text-red-dark uppercase font-semibold z-10;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+
+    &:before {
+      @apply content-[''] absolute w-[6px] h-full bg-black-secondary -z-10;
+      left: calc(50% - 1px);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// SCROLLBAR
+.custom-scrollbar {
+  // Width
+  &::-webkit-scrollbar {
+    position: absolute;
+    width: 16px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #FFF700;
+    border-radius: 14px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: #FFF700;
+    border-radius: 14px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+}

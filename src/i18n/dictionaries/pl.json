@@ -1,0 +1,137 @@
+{
+  "header": {
+    "navigation": {
+      "armySupport": "Pomoc Armii",
+      "animalsSupport": "POMOC ZWIERZĘTOM",
+      "about": "O FUNDACJI",
+      "reports": "RAPORTY"
+    }
+  },
+  "important": "Wazne",
+  "support": "WESPRZEĆ",
+  "quote": {
+    "firstLine": "NIE ROZPOCZĘLIŚMY TEJ WOJNY.",
+    "secondLine": "ALE MUSIMY TO SKOŃCZYĆ"
+  },
+  "quoteAuthor": "(C) WOŁODYMYR ZEŁENSKI",
+  "tomorrowOneDayCloseToVictory": {
+    "1": "JUTRO JEST O JEDEN DZIEŃ BLIŻEJ",
+    "2": "DO ZWYCIĘSTWA"
+  },
+  "getOutRussian": {
+    "1": "Геть з України, ",
+    "2": "москаль",
+    "3": " нєкрасівий!"
+  },
+  "weAreFromUkraine": "DOBRY WIECZÓR – JESTEŚMY Z UKRAINY!",
+  "howToHelp": "JAK POMÓC",
+  "armySupportSection": {
+    "title": "POMOC WOJSKOWYM",
+    "endingTitle": "WALKA TRWA!",
+    "firstDescription": {
+      "1": "Codziennie nasi ",
+      "2": "odważni wojownicy ",
+      "3": "walczą dla nas o ",
+      "4": "zwycięstwo, ",
+      "5": "abyśmy pewnegoranka mogli obudzić się pod ",
+      "6": "spokojnym niebem",
+      "7": ". Zanim ten dzień nadejdzie, musimy im pomóc. Niestety państwo nie może zapewnić wszystkiego w pełnym zakresie, a niektóre sprzęty w trakcie działań bojowych bardzo szybko się psują.",
+      "8": "",
+      "9": ""
+    },
+    "secondDescription": {
+      "1": "",
+      "2": "Wojskowa amunicja, drony, generatory, naprawa pojazdów bojowych... ",
+      "3": "obecnie wielu wydaje się, że większość zasobów została wyczerpana, ale musimy znaleźć w sobie siłę do walki. Od innych fundacji wiemy, że wielu żołnierzy przekazuje część swojej własnej pensji na zakup samochodów i amunicji, wyraźnie można to zobaczyć śledząc daty wzrostu wpływów finansowych. Ale czy to oni powinni to robić? oddali już tak wiele, codziennie ryzykują swoim życiem. Za naszą wolność i zwycięstwo ostatecznie płacimy wszyscy, ale to oni ",
+      "4": "oddają najwięcej.",
+      "5": "",
+      "6": ""
+    }
+  },
+  "animalSupportSection": {
+    "title": "POMOC ZWIERZĘTOM",
+    "firstDescription": {
+      "1": "Kiedy wojna nadchodzi nie wybiera czyje życie zabrać. Niestety są ci, którzy nie mogą się bronić, ",
+      "2": "nasi młodsi bracia",
+      "3": ". Według statystyk, od rozpoczęcia inwazji liczba bezdomnych zwierząt w schroniskach wzrosła ",
+      "4": "o 60%. ",
+      "5": "Ta liczba nie uwzględnia zwierząt, które pozostają w strefach aktywnych działań wojennych i muszą tam walczyć o ",
+      "6": "przetrwanie."
+    },
+    "secondDescription": {
+      "1": "Zwierzęta chorują, odnoszą rany i potrzebują opieki. Nasi odważni wojownicy nigdy ich ",
+      "2": "nie ignorują",
+      "3": ", starają się je karmić i ewakuować. Mimo najlepszych chęci, brakuje im zasobów na zapewnienie zwierzętom pożywienia, dlatego jednym z celów naszej fundacji jest Udzielenie pomocy tym bezdomnym zwierzętom. ",
+      "4": "W wyniku jednej ze zbiórek udało nam się wysłać pomoc: karmę, transporterki i środki higieny dla zwierząt do animal rescue. ",
+      "5": "Współpracujemy również z „pruszowskie stowarzyszenie na rzecz zwierząt”. Przekazując darowiznę wysokości ceny filiżanki kawy możecie ",
+      "6": "uratować małe życie.",
+      "7": "",
+      "8": ""
+    }
+  },
+  "fundraisingArmyList": {
+    "1": {
+      "title": "ZBIÓRKA NA KASK",
+      "description": "Nowoczesny hełm balistyczny dla wojska, który jest porównywany z amerykańskimi modelami ACH."
+    },
+    "2": {
+      "title": "ZBIÓRKA NA DRONY",
+      "description": "Kamera hasselblad z matrycą CMOS 4/3 wideo 5.1k HD czas lotu do 46 minut."
+    },
+    "3": {
+      "title": "ZBIÓRKANA GENERATORY",
+      "description": ""
+    }
+  },
+  "fundraisingAnimalsList": {
+    "1": {
+      "title": "KARMA DLA PSÓW"
+    },
+    "2": {
+      "title": "TRANSPORTERY DLA ZWIERZĄT"
+    },
+    "3": {
+      "title": "KARMA DLA KOTÓW"
+    }
+  },
+  "aboutUs": {
+    "title": "O NASZEJ FUNDACJI",
+    "footer": "DZIĘKUJEMY ZATEM KAŻDEMU ZA WSPARCIE, CZY TO FINANSOWE, CZY PRZEZ PRZEKAZYWANIE INFORMACJI O GALAS_UA W MEDIACH SPOŁECZNOŚCIOWYCH. GDZIEKOLWIEK JESTEŚCIE, MOŻECIE POMÓC I PRZYŚPIESZYĆ NASZE ZWYCIĘSTWO!",
+    "descriptionTitle": "Drodzy Przyjaciele, Bracia!",
+    "description": {
+      "paragraph1": {
+        "1": "Wszyscy którzy mają wspólny cel - zwycięstwo. Wojna trwa od wielu lat, ale ostatecznie nasze przebudzenie nastąpiło w poranek 24 lutego 2022 roku."
+      },
+      "paragraph2": {
+        "1": "Zwycięstwo ma wysoką cenę, nie możemy po prostu siedzieć i obserwować. Nasza grupa, tak samo jak wy, od pierwszych dni okupacji na pełną skalę pomaga naszym wojskom całymi siłami. Przez cały ten czas wysłaliśmy za granicę wiele pojazdów z pomocą humanitarną. Postanowiliśmy z naszymi działaniami wejść na oficjalny poziom ",
+        "2": "tworząc fundację galas_ua",
+        "3": ". Nazwaliśmy ją na cześć bohatera i obrońcy ",
+        "4": "Mariupola, Andrija Miśczenki (pseudonim Galas)",
+        "5": ", który zginął w walce gdy naszych żołnierzy odpychano w stronę azowstalu. Andrij pośmiertnie otrzymał medal od GUR za odblokowanie Mariupola. W naszym logo znajduje się runa Algiz, która symbolizuje ",
+        "6": "tarczę, ochronę",
+        "7": ". Stańmy się tą tarczą i ochroną dla tych, którzy codziennie walczą i bronią nas, dla naszych bohaterów."
+      },
+      "paragraph3": {
+        "1": "To jest ",
+        "2": "czas niezłomności",
+        "3": ", czas by pokazać siłę, jedność i wiarę w sprawiedliwość. Nasza fundacja obiecuje dostarczać dowody wszystkich ",
+        "4": "operacji finansowych ",
+        "5": "i zakupionych przedmiotów. Przed nami jeszcze wiele pracy, która zbliży nas do zwycięstwa! To nie jest czas na zwątpienie i poddanie się. Trzeba raz jeszcze zakasać rękawy i działać. Pamiętajcie, tu nie ma małych czynów ani dotacji, w tej wojnie ",
+        "6": "każde działanie jest ważne."
+      }
+    }
+  },
+  "reports": {
+    "title": "RAPORTY",
+    "description": "Tutaj możecie obejrzeć fotorelacje z zakupionych przez nas przedmiotów, a także zdjęcia zadowolonych żołnierzy, którzy je otrzymali."
+  },
+  "footer": {
+    "permissions": "Wykorzystywanie materiałów serwisu, obrazów i tekstów, a także automatycznekopiowanie informacji o serwisie przez jakiekolwiek programy bez pisemnej zgody„galas.ua” jest zabronione.",
+    "privacy": "Polityka prywatności",
+    "publicOffer": "Oferta publiczna",
+    "avaliability": "Informacje o dostępności",
+    "aboutUs": "O naszej fundacji",
+    "reports": "Raporty",
+    "contact": "Kontakt"
+  }
+}
