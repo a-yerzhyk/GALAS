@@ -197,8 +197,8 @@ export default async function Home({ params: { lang } }) {
           </p>
         </section>
 
-        <section className="mb-10 lg:mb-32">
-          <h3 className="text-3xl lg:text-5xl leading-[60px] font-light font-alternates text-blue text-center uppercase">
+        <section className="px-6 mb-10 lg:mb-32">
+          <h3 className="text-3xl lg:text-5xl lg:leading-[60px] font-light font-alternates text-blue text-center uppercase">
             {dictionary.weAreFromUkraine}
           </h3>
         </section>

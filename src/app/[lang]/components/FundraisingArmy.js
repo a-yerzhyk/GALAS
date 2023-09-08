@@ -4,7 +4,7 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 
 import Image from 'next/image'
-import { classNames } from '@/utils/classNames'
+import FundraisingItem from './FundraisingItem';
 
 import helmet from '@/assets/images/helmet.png'
 import drone from '@/assets/images/drone.png'
@@ -57,7 +57,7 @@ export default function FundraisingCarousel({ dictionary }) {
       options={defaultSplideOptions}
     >
       <div className="relative flex justify-center min-[1620px]:justify-between items-center">
-        <div className="splide__arrows flex justify-center absolute left-9 min-[1620px]:static min-[1620px]:flex-1 z-10">
+        <div className="splide__arrows flex justify-center absolute left-9 min-[1620px]:static min-[1620px]:flex-1 max-sm:w-[50px] max-sm:left-3 z-10">
           <button className="splide__arrow splide__arrow--prev">
               <Image src={arrowLeft} alt="arrow-left" />
           </button>
@@ -66,42 +66,22 @@ export default function FundraisingCarousel({ dictionary }) {
           {
             fundraisings.map((fundraising, index) => (
               <SplideSlide key={index}>
-                <div
-                  className={classNames(
-                    "relative h-full rounded-3xl w-[406px] pb-[69px] pt-[42px] px-[26px] bg-black-secondary hover:bg-blue",
-                    fundraising.isImportant ? "border-4 border-red-dark" : ""
-                  )}
-                >
-                  {
-                    fundraising.isImportant &&
-                    <div className="important-mark">
-                      {dictionary.important}
-                    </div>
-                  }
-                  <div className="flex flex-col items-center gap-y-5 h-full">
-                    <div className="flex items-center justify-center basis-[359px]">
-                      <Image src={fundraising.image} priority={false} alt={fundraising.alt} />
-                    </div>
-                    <div className="flex-1 flex flex-col justify-between items-center gap-y-11">
-                      <div>
-                        <p className="text-2xl font-semibold uppercase text-center mb-6">
-                          {fundraising.title}
-                        </p>
-                        <p className="text-sm text-center">
-                          {fundraising.description}
-                        </p>
-                      </div>
-                      <a className="button button_medium button_white" href={fundraising.link}>
-                        {dictionary.support}
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <FundraisingItem
+                  title={fundraising.title}
+                  description={fundraising.description}
+                  image={{
+                    src: fundraising.image,
+                    alt: fundraising.alt
+                  }}
+                  link={fundraising.link}
+                  isImportant={fundraising.isImportant}
+                  dictionary={dictionary}
+                />
               </SplideSlide>
             ))
           }
         </SplideTrack>
-        <div className="splide__arrows flex justify-center absolute right-9 min-[1620px]:static min-[1620px]:flex-1 z-10">
+        <div className="splide__arrows flex justify-center absolute right-9 min-[1620px]:static min-[1620px]:flex-1 max-sm:w-[50px] max-sm:right-3 z-10">
           <button className="splide__arrow splide__arrow--next">
               <Image src={arrowRight} alt="arrow-right" />
           </button>
