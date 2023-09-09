@@ -3,10 +3,11 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import ImagePreview from "./ImagePreview"
+import useReports from "@/service/useReports"
 
-import reports from '@/service/reports'
 
 export default function ReportsList() {
+  const reports = useReports()
   const [imagePreview, setImagePreview] = useState(null)
   const [currentReportIndex, setCurrentReportIndex] = useState(null)
 
