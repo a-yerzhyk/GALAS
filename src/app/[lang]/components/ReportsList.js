@@ -37,7 +37,7 @@ export default function ReportsList() {
 
   return (
     <>
-      <div className="space-y-4 space-x-4">
+      <div className="flex gap-4 items-center justify-center flex-wrap">
         {
           reports.map((image, index) => (
             <Image
