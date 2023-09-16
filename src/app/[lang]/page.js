@@ -11,9 +11,11 @@ import logoBlack from '@/assets/logo-black.svg'
 import logoBig from '@/assets/logo-big.svg'
 import trigent from '@/assets/trigent.svg'
 import revolut from '@/assets/revolut.svg'
+import paypal from '@/assets/paypal.svg'
 import pomagam from '@/assets/pomagam.svg'
 import instagram from '@/assets/instagram.svg'
 import mail from '@/assets/mail.svg'
+import TextToCopy from './components/TextToCopy'
 
 export default async function Home({ params: { lang } }) {
   const dictionary = await getDictionary(lang)
@@ -42,7 +44,7 @@ export default async function Home({ params: { lang } }) {
           <div>
             <LanguageSwitch lang={lang}/>
           </div>
-          <a className="button button_small button_yellow" href="#">{dictionary.support}</a>
+          <a className="button button_small button_yellow" href="#support">{dictionary.support}</a>
         </div>
       </header>
       <main className="container">
@@ -56,11 +58,15 @@ export default async function Home({ params: { lang } }) {
             </h2>
             <p className="text-base lg:text-2xl font-extralight uppercase">{dictionary.quoteAuthor}</p>
           </div>
-          <a className="button button_large button_blue" href="#">{dictionary.support}</a>
+          <a className="button button_large button_blue" href="#support">{dictionary.support}</a>
         </section>
 
         <a className="relative -top-[100px]" id="army"></a>
-        <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 mb-5 lg:mx-14 lg:mb-28">
+        <section className="mb-5 lg:mb-28">
+          <FundraisingArmy dictionary={dictionary} />          
+        </section>
+
+        <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 lg:mx-14 mb-20">
           <div className="flex flex-col lg:flex-row justify-between gap-x-[100px] gap-y-8">
             <div className="flex-1">
               <p className="text-2xl lg:text-5xl font-alternates text-yellow uppercase mb-6">
@@ -100,10 +106,6 @@ export default async function Home({ params: { lang } }) {
           </p>
         </section>
 
-        <section className="mb-20">
-          <FundraisingArmy dictionary={dictionary} />          
-        </section>
-
         <section className="px-6 mb-11 lg:mb-20">
           <h3 className="text-3xl lg:text-5xl lg:leading-[60px] font-light font-alternates text-blue text-center uppercase">
             {dictionary.tomorrowOneDayCloseToVictory['1']}
@@ -113,7 +115,11 @@ export default async function Home({ params: { lang } }) {
         </section>
         
         <a className="relative -top-[100px]" id="animals"></a>
-        <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 mb-14 lg:mx-14 lg:mb-20">
+        <section className="mb-14 lg:mb-20">
+          <FundraisingAnimals dictionary={dictionary} />
+        </section>
+
+        <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 lg:mx-14 mb-9 lg:mb-20">
           <div className="flex flex-col lg:flex-row justify-between gap-x-[100px] gap-y-8">
             <div className="flex-1">
               <p className="text-2xl lg:text-5xl font-alternates text-yellow uppercase mb-6">
@@ -141,10 +147,6 @@ export default async function Home({ params: { lang } }) {
               </p>
             </div>
           </div>
-        </section>
-
-        <section className="mb-8 lg:mb-36">
-          <FundraisingAnimals dictionary={dictionary} />
         </section>
         
         <section className="px-6 mb-9 lg:mb-20">
@@ -216,22 +218,36 @@ export default async function Home({ params: { lang } }) {
           </div>
         </section>
         
+        <a className="relative -top-[100px]" id="support"></a>
         <section className="relative px-8 mb-8 lg:mb-16 2xl:px-28 2xl:mb-20 overflow-hidden">
           <h3 className="text-2xl lg:text-5xl leading-[60px] font-light font-alternates text-yellow text-center uppercase">
-            {dictionary.howToHelp}
+            {dictionary.howToHelp.title}
           </h3>
           <div className="flex justify-between items-center sm:px-16">
             <div className="py-20 lg:py-0 h-full flex flex-col items-start justify-center gap-y-6">
-              <a className="flex items-center gap-4 lg:gap-7" href="https://www.revolut.com/" target="_blank">
+              <a className="flex items-center gap-4 lg:gap-7" href="https://revolut.me/galasua" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={revolut} alt="revolut-logo" />
                 <span className="text-lg lg:text-3xl">LT24 3250 0112 4588 1750</span>
+              </a>
+              <a className="flex items-center gap-4 lg:gap-7" href="https://www.paypal.me/Galasua" target="_blank">
+                <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={paypal} alt="paypal-logo" />
+                <span className="text-lg lg:text-3xl">paypal.me/Galasua</span>
               </a>
               <a className="flex items-center gap-4 lg:gap-7" href="https://pomagam.pl/galas_ua" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={pomagam} alt="pomagam-logo" />
                 <span className="text-lg lg:text-3xl">pomagam.pl/galas_ua</span>
               </a>
+              <div>
+                <div className="text-lg lg:text-3xl">
+                  <b>Konto Polskie:</b> <TextToCopy text="PL77 1240 6380 1111 0011 2402 4325" />
+                </div>
+                <div className="text-lg lg:text-3xl">
+                  <b>BIC/SWIFT:</b> <TextToCopy text="PKOPPLPW" />
+                </div>
+              </div>
+              <p className="">* <span className="underline">{dictionary.howToHelp.info}</span></p>
             </div>
-            <Image className="absolute -right-[150px] bottom-0 lg:static h-[300px] lg:h-[500px] xl:h-[700px] -z-10" src={trigent} alt="trident" />
+            <Image className="absolute -right-[150px] lg:static h-[300px] lg:h-[500px] xl:h-[700px] -z-10" src={trigent} alt="trident" />
           </div>
         </section>
       </main>
@@ -250,11 +266,11 @@ export default async function Home({ params: { lang } }) {
             <div className="flex-1 flex justify-between gap-[80px]">
               <div className="flex-1 basis-[730px] flex flex-col gap-[10px] justify-between">
                 <div className="text-base">{dictionary.footer.permissions}</div>
-                <div className="flex justify-between text-base font-bold flex-wrap gap-2">
+                {/* <div className="flex justify-between text-base font-bold flex-wrap gap-2">
                   <Link href="#">{dictionary.footer.privacy}</Link>
                   <Link href="#">{dictionary.footer.publicOffer}</Link>
                   <Link href="#">{dictionary.footer.avaliability}</Link>
-                </div>
+                </div> */}
               </div>
               <div className="hidden lg:flex flex-1 basis-[200px] flex-col gap-8 text-lg font-bold uppercase">
                 <Link href="#about">{dictionary.footer.aboutUs}</Link>

@@ -26,10 +26,10 @@ export default function FundraisingCarousel({ dictionary }) {
   const fundraisings = [
     {
       title: dictionary.fundraisingArmyList['1'].title,
-      description: dictionary.fundraisingArmyList['1'].description,
+      // description: dictionary.fundraisingArmyList['1'].description,
       image: helmet,
       alt: 'helmet',
-      link: '#',
+      link: '#support',
       isImportant: false,
     },
     {
@@ -37,7 +37,7 @@ export default function FundraisingCarousel({ dictionary }) {
       description: dictionary.fundraisingArmyList['2'].description,
       image: drone,
       alt: 'drone',
-      link: '#',
+      link: '#support',
       isImportant: true,
     },
     {
@@ -45,7 +45,7 @@ export default function FundraisingCarousel({ dictionary }) {
       description: dictionary.fundraisingArmyList['3'].description,
       image: generator,
       alt: 'generator',
-      link: '#',
+      link: '#support',
       isImportant: false,
     }
   ]

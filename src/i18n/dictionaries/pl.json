@@ -24,7 +24,10 @@
     "3": " нєкрасівий!"
   },
   "weAreFromUkraine": "DOBRY WIECZÓR – JESTEŚMY Z UKRAINY!",
-  "howToHelp": "JAK POMÓC",
+  "howToHelp": {
+    "title": "JAK POMÓC",
+    "info": "Jeżeli chcesz wesprzeć jakąś konkretną zbiórkę- dodaj komentarz z nazwą zbiórki pod czas wpłaty pieniędzy"
+  },
   "armySupportSection": {
     "title": "POMOC WOJSKOWYM",
     "endingTitle": "WALKA TRWA!",
@@ -71,15 +74,15 @@
   },
   "fundraisingArmyList": {
     "1": {
-      "title": "ZBIÓRKA NA KASK",
+      "title": "WYPOSAŻENIE",
       "description": "Nowoczesny hełm balistyczny dla wojska, który jest porównywany z amerykańskimi modelami ACH."
     },
     "2": {
-      "title": "ZBIÓRKA NA DRONY",
+      "title": "DRONY",
       "description": "Kamera hasselblad z matrycą CMOS 4/3 wideo 5.1k HD czas lotu do 46 minut."
     },
     "3": {
-      "title": "ZBIÓRKANA GENERATORY",
+      "title": "SPSZĘT",
       "description": ""
     }
   },
