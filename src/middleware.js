@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-import { i18n } from './src/i18n/i18n-config'
+import { i18n } from './i18n/i18n-config'
 
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
@@ -51,7 +51,7 @@ export function middleware(request) {
     // The new URL is now /en-US/products
     return NextResponse.redirect(
       new URL(
-        `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
+        `/${locale}`,
         request.url
       )
     )
