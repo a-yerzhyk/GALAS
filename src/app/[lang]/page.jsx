@@ -15,6 +15,7 @@ import paypal from '@/assets/paypal.svg'
 import pomagam from '@/assets/pomagam.svg'
 import instagram from '@/assets/instagram.svg'
 import mail from '@/assets/mail.svg'
+import mono from '@/assets/mono.jpeg'
 import TextToCopy from '@/components/TextToCopy'
 
 export default async function Home({ params: { lang } }) {
@@ -236,6 +237,10 @@ export default async function Home({ params: { lang } }) {
               <a className="flex items-center gap-4 lg:gap-7" href="https://pomagam.pl/galas_ua" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={pomagam} alt="pomagam-logo" />
                 <span className="text-lg lg:text-3xl">pomagam.pl/galas_ua</span>
+              </a>
+              <a className="flex items-center gap-4 lg:gap-7" href="https://send.monobank.ua/jar/3998xtXbgh" target="_blank">
+                <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={mono} alt="mono-logo" />
+                <span className="text-lg lg:text-3xl">send.monobank.ua</span>
               </a>
               <div>
                 <div className="text-lg lg:text-3xl">
