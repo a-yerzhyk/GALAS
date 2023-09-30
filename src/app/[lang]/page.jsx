@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getDictionary } from '@/i18n/get-dictionary'
-import LanguageSwitch from './components/LanguageSwitch'
-import FundraisingArmy from './components/FundraisingArmy'
-import FundraisingAnimals from './components/FundraisingAnimals'
-import ReportsList from './components/ReportsList'
+import LanguageSwitch from '@/components/LanguageSwitch'
+import FundraisingArmy from '@/components/FundraisingArmy'
+import FundraisingAnimals from '@/components/FundraisingAnimals'
+import ReportsList from '@/components/ReportsList'
 
 import logoLight from '@/assets/logo-light.svg'
 import logoBlack from '@/assets/logo-black.svg'
@@ -15,14 +15,14 @@ import paypal from '@/assets/paypal.svg'
 import pomagam from '@/assets/pomagam.svg'
 import instagram from '@/assets/instagram.svg'
 import mail from '@/assets/mail.svg'
-import TextToCopy from './components/TextToCopy'
+import TextToCopy from '@/components/TextToCopy'
 
 export default async function Home({ params: { lang } }) {
   const dictionary = await getDictionary(lang)
 
   return (
     <>
-      <header className="fixed bg-black-secondary z-10 w-full">
+      <header className="fixed bg-black-secondary z-20 w-full">
         <div className="container px-6 lg:px-24 py-4 flex justify-between items-center sm:gap-8">
           <Image src={logoLight} alt="logo-light" height="60" />
           <nav className="flex-1 hidden xl:block">
@@ -63,7 +63,7 @@ export default async function Home({ params: { lang } }) {
 
         <a className="relative -top-[100px]" id="army"></a>
         <section className="mb-5 lg:mb-28">
-          <FundraisingArmy dictionary={dictionary} />          
+          <FundraisingArmy />
         </section>
 
         <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 lg:mx-14 mb-20">
@@ -116,7 +116,7 @@ export default async function Home({ params: { lang } }) {
         
         <a className="relative -top-[100px]" id="animals"></a>
         <section className="mb-14 lg:mb-20">
-          <FundraisingAnimals dictionary={dictionary} />
+          <FundraisingAnimals />
         </section>
 
         <section className="border-[3px] border-yellow rounded-2xl px-4 py-6 lg:px-12 lg:pt-[52px] lg:pb-[63px] mx-6 lg:mx-14 mb-9 lg:mb-20">

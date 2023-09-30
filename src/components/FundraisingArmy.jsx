@@ -1,5 +1,8 @@
 'use client'
 
+import { useContext } from 'react'
+import { DictionaryContext } from '@/app/dictionaryProvider'
+
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/core';
 
@@ -22,7 +25,9 @@ const defaultSplideOptions = {
   focus: 'center',
 }
 
-export default function FundraisingCarousel({ dictionary }) {
+export default function FundraisingCarousel() {
+  const { dictionary } = useContext(DictionaryContext)
+
   const fundraisings = [
     {
       title: dictionary.fundraisingArmyList['1'].title,

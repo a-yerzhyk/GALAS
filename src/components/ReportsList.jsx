@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import ImagePreview from "./ImagePreview"
+import ImagePreview from "@/components/ImagePreview"
 import useReports from "@/service/useReports"
 
 
