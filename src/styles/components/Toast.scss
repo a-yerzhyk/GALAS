@@ -1,0 +1,37 @@
+.toast {
+  @apply bg-[#006DDA];
+}
+
+.toast_show {
+  opacity: 0;
+  animation: toastAppear 0.3s ease-in-out forwards;
+  transform: translateX(-50%);
+  z-index: 9999;
+  @apply fixed bottom-11 left-1/2 sm:bottom-4 md:bottom-6;
+}
+
+@keyframes toastAppear {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.toast_hide {
+  animation: toastDisappear 0.3s ease-in-out forwards;
+}
+
+@keyframes toastDisappear {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100%);
+  }
+}
