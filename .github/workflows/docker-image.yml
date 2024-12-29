@@ -25,3 +25,35 @@ jobs:
       env:
         VPS_USER: ${{ secrets.VPS_USER }}
         VPS_HOST: ${{ secrets.VPS_HOST }}
+        
+    - name: Build Docker image
+      run: |
+        docker build -t galas-server .
+
+    - name: Deploy to VPS
+      env:
+        VPS_USER: ${{ secrets.VPS_USER }}
+        VPS_HOST: ${{ secrets.VPS_HOST }}
+        IMAGE_NAME: galas-server  # Adjust with your Docker image name
+        CONTAINER_NAME: galas-server  # Adjust with your Docker container name
+      run: |
+        # Remove existing containers/images
+        ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
+          # Stop and remove any existing container if it exists
+          docker ps -q -f name=$CONTAINER_NAME | xargs -r docker stop
+          docker ps -a -q -f name=$CONTAINER_NAME | xargs -r docker rm
+          
+          # Remove existing image if it exists
+          if docker image inspect $IMAGE_NAME > /dev/null 2>&1; then
+            docker rmi $IMAGE_NAME
+          fi
+        EOF
+        
+        # Copy Docker image to VPS
+        docker save $FRONTEND_IMAGE | bzip2 | ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST 'bunzip2 | docker load'
+
+        # Run Docker container on VPS
+        ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
+          # Run new container
+          docker run -d --name $CONTAINER_NAME -p 127.0.0.1:3000:3000/tcp $FRONTEND_IMAGE
+        EOF
