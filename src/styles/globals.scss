@@ -51,7 +51,7 @@
     }
 
     &_large {
-      @apply text-2xl lg:text-4xl px-11 py-5 lg:px-20 lg:py-9 rounded-2xl;
+      @apply text-xl lg:text-3xl px-9 py-5 lg:px-16 lg:py-7 rounded-2xl font-semibold;
     }
   }
 

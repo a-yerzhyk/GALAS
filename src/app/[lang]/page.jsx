@@ -49,17 +49,20 @@ export default async function Home({ params: { lang } }) {
         </nav>
       </header>
       <section className="container">
-        <section className="relative py-20 lg:h-screen pt-[170px] flex flex-col items-start justify-center gap-y-[110px] px-6 lg:px-28 mb-20 overflow-hidden">
+        <section className="relative lg:h-screen flex flex-col items-start justify-center gap-y-[90px] py-20 pt-[170px] pl-6 lg:pl-28 mb-20 overflow-hidden">
           <Image className="absolute -right-[200px] lg:right-[68px] -z-10 h-[500px] lg:h-[75%]" src={trigent} alt="trident - Ukrainian emblem" />
           <div className="max-w-[330px] md:max-w-none">
-            <h2 className="text-4xl lg:text-6xl xl:text-7xl xl:leading-[104px] font-light tracking-widest uppercase mb-3 font-alternates">
+            <h2 className="text-4xl lg:text-6xl lg:leading-[80px] min-[1500px]:text-7xl min-[1500px]:leading-[104px] font-light tracking-widest uppercase mb-3 font-alternates">
               "{dictionary.quote.firstLine}
               <br />
               {dictionary.quote.secondLine}"
             </h2>
             <p className="text-base lg:text-2xl font-extralight uppercase">{dictionary.quoteAuthor}</p>
           </div>
-          <a className="button button_large button_blue" href="#support">{dictionary.support}</a>
+          <div className="flex flex-col items-start gap-y-2">
+            <a className="button button_large button_blue" href="#support">{dictionary.support}</a>
+            <a className="button button_large button_yellow w-fit" href="#support">{dictionary.howToHelp.feed_troops}</a>
+          </div>
         </section>
 
         <a className="relative -top-[100px]" id="army"></a>
