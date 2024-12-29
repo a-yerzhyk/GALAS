@@ -55,5 +55,5 @@ jobs:
         # Run Docker container on VPS
         ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
           # Run new container
-          docker run -d --name $CONTAINER_NAME -p 127.0.0.1:3000:3000/tcp $IMAGE_NAME
+          docker run -d --name $CONTAINER_NAME -p 3000:80 $IMAGE_NAME
         EOF
