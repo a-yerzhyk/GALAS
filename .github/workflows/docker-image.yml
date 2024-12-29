@@ -1,0 +1,59 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+    
+    - name: Test SSH Connection
+      run: ssh -v -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} echo "SSH connection successful"
+      env:
+        VPS_USER: ${{ secrets.VPS_USER }}
+        VPS_HOST: ${{ secrets.VPS_HOST }}
+        
+    - name: Build Docker image
+      run: |
+        docker build -t galas-server .
+
+    - name: Deploy to VPS
+      env:
+        VPS_USER: ${{ secrets.VPS_USER }}
+        VPS_HOST: ${{ secrets.VPS_HOST }}
+        IMAGE_NAME: galas-server  # Adjust with your Docker image name
+        CONTAINER_NAME: galas-server  # Adjust with your Docker container name
+      run: |
+        # Remove existing containers/images
+        ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
+          # Stop and remove any existing container if it exists
+          docker ps -q -f name=$CONTAINER_NAME | xargs -r docker stop
+          docker ps -a -q -f name=$CONTAINER_NAME | xargs -r docker rm
+          
+          # Remove existing image if it exists
+          if docker image inspect $IMAGE_NAME > /dev/null 2>&1; then
+            docker rmi $IMAGE_NAME
+          fi
+        EOF
+        
+        # Copy Docker image to VPS
+        docker save $IMAGE_NAME | bzip2 | ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST 'bunzip2 | docker load'
+
+        # Run Docker container on VPS
+        ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
+          # Run new container
+          docker run -d --name $CONTAINER_NAME -p 3000:80 $IMAGE_NAME
+        EOF
