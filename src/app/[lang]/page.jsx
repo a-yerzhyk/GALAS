@@ -24,9 +24,9 @@ export default async function Home({ params: { lang } }) {
   return (
     <>
       <header className="fixed bg-black-secondary z-20 w-full">
-        <div className="container px-6 lg:px-24 py-4 flex justify-between items-center sm:gap-8">
+        <nav className="container px-6 lg:px-24 py-4 flex justify-between items-center sm:gap-8">
           <Image src={logoLight} alt="logo-light" height="60" />
-          <nav className="flex-1 hidden xl:block">
+          <div className="flex-1 hidden xl:block">
             <ul className="flex justify-between items-center min-[1560px]:gap-[100px] min-[1560px]:justify-center">
               <li>
                 <a className="navigation-item navigation-item__active" href="#army">{dictionary.header.navigation.armySupport}</a>
@@ -41,16 +41,16 @@ export default async function Home({ params: { lang } }) {
                 <a className="navigation-item navigation-item__active" href="#reports">{dictionary.header.navigation.reports}</a>
               </li>
             </ul>
-          </nav>
+          </div>
           <div>
             <LanguageSwitch lang={lang}/>
           </div>
           <a className="button button_small button_yellow" href="#support">{dictionary.support}</a>
-        </div>
+        </nav>
       </header>
-      <main className="container">
+      <section className="container">
         <section className="relative py-20 lg:h-screen pt-[170px] flex flex-col items-start justify-center gap-y-[110px] px-6 lg:px-28 mb-20 overflow-hidden">
-          <Image className="absolute -right-[200px] lg:right-[68px] -z-10 h-[500px] lg:h-[75%]" src={trigent} alt="trident" />
+          <Image className="absolute -right-[200px] lg:right-[68px] -z-10 h-[500px] lg:h-[75%]" src={trigent} alt="trident - Ukrainian emblem" />
           <div className="max-w-[330px] md:max-w-none">
             <h2 className="text-4xl lg:text-6xl xl:text-7xl xl:leading-[104px] font-light tracking-widest uppercase mb-3 font-alternates">
               "{dictionary.quote.firstLine}
@@ -162,10 +162,10 @@ export default async function Home({ params: { lang } }) {
         <section className="border-[3px] border-yellow rounded-2xl px-4 pt-5 pb-7 lg:pl-[80px] lg:pr-[90px] 2xl:pl-[194px] 2xl:pr-[118px] lg:pt-[84px] lg:pb-[70px] mx-6 lg:mx-14 mb-6 lg:mb-20">
           <div className="flex flex-col lg:flex-row lg:mb-16 gap-y-5 lg:gap-y-0 justify-between custom-scrollbar ">
             <div className="flex-1 flex flex-col items-center gap-y-[60px]">
-              <p className="text-2xl lg:text-4xl 2xl:text-5xl font-alternates text-yellow uppercase">
+              <h1 className="text-2xl lg:text-4xl 2xl:text-5xl font-alternates text-yellow uppercase">
                 {dictionary.aboutUs.title}
-              </p>
-              <Image className="hidden lg:block" src={logoBig} alt="GALAS Logo" width="250" />
+              </h1>
+              <Image className="hidden lg:block" src={logoBig} alt="galas logo" width="250" />
             </div>
             <div className="flex-1">
               <p className="text-base font-light">
@@ -208,9 +208,9 @@ export default async function Home({ params: { lang } }) {
 
         <a className="relative -top-[100px]" id="reports"></a>
         <section className="border-[3px] border-yellow rounded-2xl px-4 pt-5 lg:px-[50px] lg:pt-[84px] mx-6 mb-14 lg:mx-14 lg:mb-20">
-          <p className="text-3xl font-alternates text-yellow uppercase mb-6">
+          <h1 className="text-3xl font-alternates text-yellow uppercase mb-6">
             {dictionary.reports.title}
-          </p>
+          </h1>
           <p className="text-base font-light max-w-[420px]">
             {dictionary.reports.description}
           </p>
@@ -220,53 +220,66 @@ export default async function Home({ params: { lang } }) {
         </section>
         
         <a className="relative -top-[100px]" id="support"></a>
-        <section className="relative px-8 mb-8 lg:mb-16 2xl:px-28 2xl:mb-20 overflow-hidden">
+        <section className="relative px-8 mb-8 lg:mb-16 2xl:px-28 2xl:mb-20 overflow-hidden space-y-5">
           <h3 className="text-2xl lg:text-5xl leading-[60px] font-light font-alternates text-yellow text-center uppercase">
             {dictionary.howToHelp.title}
           </h3>
-          <div className="flex justify-between items-center sm:px-16">
+          <div className="flex justify-between items-center md:px-16">
             <div className="py-20 lg:py-0 h-full flex flex-col items-start justify-center gap-y-6">
-              <a className="flex items-center gap-4 lg:gap-7" href="https://revolut.me/galasua" target="_blank">
+              <a className="flex items-center gap-4 lg:gap-7 hover:underline" href="https://revolut.me/galasua" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={revolut} alt="revolut-logo" />
                 <span className="text-lg lg:text-3xl">LT24 3250 0112 4588 1750</span>
               </a>
-              <a className="flex items-center gap-4 lg:gap-7" href="https://www.paypal.me/Galasua" target="_blank">
+              <a className="flex items-center gap-4 lg:gap-7 hover:underline" href="https://www.paypal.me/Galasua" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={paypal} alt="paypal-logo" />
                 <span className="text-lg lg:text-3xl">paypal.me/Galasua</span>
               </a>
-              <a className="flex items-center gap-4 lg:gap-7" href="https://pomagam.pl/galas_ua" target="_blank">
+              <a className="flex items-center gap-4 lg:gap-7 hover:underline" href="https://pomagam.pl/galas_ua" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={pomagam} alt="pomagam-logo" />
                 <span className="text-lg lg:text-3xl">pomagam.pl/galas_ua</span>
               </a>
-              <a className="flex items-center gap-4 lg:gap-7" href="https://send.monobank.ua/jar/3998xtXbgh" target="_blank">
+              <a className="flex items-center gap-4 lg:gap-7 hover:underline" href="https://send.monobank.ua/jar/3998xtXbgh" target="_blank">
                 <Image className="h-[45px] w-[50px] lg:h-[88px] lg:w-[90px]" src={mono} alt="mono-logo" />
                 <span className="text-lg lg:text-3xl">send.monobank.ua</span>
               </a>
-              <div>
-                <div className="text-lg lg:text-3xl">
-                  <b>Konto Polskie:</b> <TextToCopy text="PL77 1240 6380 1111 0011 2402 4325" />
+              <article className="text-lg lg:text-3xl">
+                <div>
+                  <span className="font-semibold">Konto Polskie:</span> <TextToCopy text="PL77 1240 6380 1111 0011 2402 4325" />
                 </div>
-                <div className="text-lg lg:text-3xl">
-                  <b>BIC/SWIFT:</b> <TextToCopy text="PKOPPLPW" />
+                <div>
+                  <span className="font-semibold">BIC/SWIFT:</span> <TextToCopy text="PKOPPLPW" />
                 </div>
-              </div>
+              </article>
+              <article className="flex flex-col gap-2 border-[2px] border-yellow p-2 rounded-xl">
+                <h1 className="text-lg lg:text-3xl font-semibold text-yellow">
+                  {dictionary.howToHelp.feed_troops}
+                </h1>
+                <ul className="text-base flex gap-1 flex-col">
+                  <li>
+                    <span className="font-semibold">MONOBANK:</span> <TextToCopy text="4441 1110 6499 1825" />
+                  </li>
+                  <li>
+                    <span className="font-semibold">MILLENIUM:</span> <TextToCopy text="92 1160 2202 0000 0003 6957 0312" />
+                  </li>
+                </ul>
+              </article>
               <p className="">* <span className="underline">{dictionary.howToHelp.info}</span></p>
             </div>
             <Image className="absolute -right-[150px] lg:static h-[300px] lg:h-[500px] xl:h-[700px] -z-10" src={trigent} alt="trident" />
           </div>
         </section>
-      </main>
+      </section>
       <footer className="bg-white text-black">
         <div className="container px-8 pt-4 pb-11 lg:px-14 lg:py-[70px] flex flex-col gap-5">
           <div className="flex flex-col lg:flex-row justify-between gap-y-[10px] gap-x-[30px]">
             <div className="space-y-2 sm:flex justify-between items-center flex-wrap flex-col sm:flex-row lg:block">
               <div className="sm:flex-1 sm:basis-[41%]">
-                <Image className="w-fit h-[60px] lg:h-[127px]" src={logoBlack} alt="galas_logo_black" />
+                <Image className="w-fit h-[60px] lg:h-[127px]" src={logoBlack} alt="galas black logo" />
               </div>
-              <div className="w-full sm:flex-1 sm:basis-[59%] flex justify-between lg:hidden text-lg font-bold uppercase break-keep">
+              <nav className="w-full sm:flex-1 sm:basis-[59%] flex justify-between lg:hidden text-lg font-bold uppercase break-keep">
                 <Link className="" href="#about">{dictionary.footer.aboutUs}</Link>
                 <Link className="" href="#reports">{dictionary.footer.reports}</Link>
-              </div>
+              </nav>
             </div>
             <div className="flex-1 flex justify-between gap-[80px]">
               <div className="flex-1 basis-[730px] flex flex-col gap-[10px] justify-between">
@@ -277,18 +290,18 @@ export default async function Home({ params: { lang } }) {
                   <Link href="#">{dictionary.footer.avaliability}</Link>
                 </div> */}
               </div>
-              <div className="hidden lg:flex flex-1 basis-[200px] flex-col gap-8 text-lg font-bold uppercase">
+              <nav className="hidden lg:flex flex-1 basis-[200px] flex-col gap-8 text-lg font-bold uppercase">
                 <Link href="#about">{dictionary.footer.aboutUs}</Link>
                 <Link href="#reports">{dictionary.footer.reports}</Link>
-              </div>
+              </nav>
               <div className="hidden 2xl:block flex-1 basis-[360px] space-y-6 font-bold">
                 <div className="text-base">{dictionary.footer.contact}:</div>
                 <a href="https://www.instagram.com/galas_ua" target="_blank" className="flex gap-4 items-center">
-                  <Image src={instagram} alt="instagram" height="40" />
+                  <Image src={instagram} alt="instagram logo" height="40" />
                   galas_ua
                 </a>
                 <a href="mailto:foundation.galas@gmail.com" className="flex gap-4 items-center">
-                  <Image src={mail} alt="mail" height="40" />
+                  <Image src={mail} alt="mail icon" height="40" />
                   foundation.galas@gmail.com
                 </a>
               </div>

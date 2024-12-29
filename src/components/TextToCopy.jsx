@@ -19,7 +19,7 @@ export default function TextToCopy ({ text, className }) {
     copyToClipboard(text)
   }
   return (
-    <span className={classNames(className, 'cursor-pointer hover:underline')} onClick={handleClick}>
+    <span className={classNames(className, 'cursor-pointer opacity-80 underline hover:opacity-100')} onClick={handleClick}>
       {text}
     </span>
   )
