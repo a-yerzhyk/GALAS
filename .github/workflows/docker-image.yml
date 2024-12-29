@@ -50,10 +50,10 @@ jobs:
         EOF
         
         # Copy Docker image to VPS
-        docker save $FRONTEND_IMAGE | bzip2 | ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST 'bunzip2 | docker load'
+        docker save $IMAGE_NAME | bzip2 | ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST 'bunzip2 | docker load'
 
         # Run Docker container on VPS
         ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
           # Run new container
-          docker run -d --name $CONTAINER_NAME -p 127.0.0.1:3000:3000/tcp $FRONTEND_IMAGE
+          docker run -d --name $CONTAINER_NAME -p 127.0.0.1:3000:3000/tcp $IMAGE_NAME
         EOF
