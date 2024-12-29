@@ -253,7 +253,7 @@ export default async function Home({ params: { lang } }) {
                   <span className="font-semibold">BIC/SWIFT:</span> <TextToCopy text="PKOPPLPW" />
                 </div>
               </article>
-              <article className="flex flex-col gap-2 border-[2px] border-yellow p-2 rounded-xl">
+              <article className="flex flex-col gap-2 border-[2px] border-yellow p-2 rounded-xl my-3">
                 <h1 className="text-lg lg:text-3xl font-semibold text-yellow">
                   {dictionary.howToHelp.feed_troops}
                 </h1>
